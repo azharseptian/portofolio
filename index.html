@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="id" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Portofolio | Azhar Septian Awaludin</title>
+
+  <!-- GOOGLE FONTS — Poppins (display) + Sora (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Sora:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- BOXICONS CDN — untuk ikon media sosial & UI -->
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+
+  <!-- STYLESHEET UTAMA -->
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https:cloudeflare.com">
+</head>
+<body>
+
+  <!--  NAVIGATION BAR — sticky, dengan toggle dark mode -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <!-- Logo / Brand -->
+      <a href="#home" class="nav-logo">
+        <span class="logo-bracket">&lt;</span>Porto<span class="logo-accent">folio</span><span class="logo-bracket">/&gt;</span>
+      </a>
+
+      <!-- Menu Desktop -->
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="#home"    class="nav-link active">Home</a></li>
+        <li><a href="#about"   class="nav-link">About</a></li>
+        <li><a href="#skills"  class="nav-link">Skills</a></li>
+        <li><a href="#project" class="nav-link">Project</a></li>
+        <li><a href="#certification" class="nav-link">Certification</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+
+      <!-- Kontrol kanan: dark mode toggle + hamburger -->
+      <div class="nav-controls">
+        <!-- Toggle Dark / Light Mode -->
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle tema">
+          <i class='bx bx-moon'   id="moonIcon"></i>
+          <i class='bx bx-sun'    id="sunIcon" style="display:none;"></i>
+        </button>
+
+        <!-- Hamburger untuk Mobile -->
+        <button class="hamburger" id="hamburger" aria-label="Buka menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- SECTION 1 — HOME -->
+  <section class="hero" id="home">
+    <!-- Partikel dekoratif latar belakang (diisi JS) -->
+    <div class="hero-bg-orbs">
+      <div class="orb orb-1"></div>
+      <div class="orb orb-2"></div>
+      <div class="orb orb-3"></div>
+    </div>
+
+    <div class="hero-container">
+      <!-- Foto Profil -->
+      <div class="hero-photo-wrapper" data-aos="fade-right">
+        <div class="photo-ring">
+          <div class="photo-frame">
+            <img
+              src="Gambar/profil.jpeg"
+              alt="Foto Profil"
+              class="profile-photo"
+              id="profilePhoto"
+            />
+          </div>
+          <!-- Dekorasi cincin berputar -->
+          <svg class="ring-svg" viewBox="0 0 320 320" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="160" cy="160" r="155" fill="none" stroke="url(#ringGrad)" stroke-width="2" stroke-dasharray="8 6"/>
+            <defs>
+              <linearGradient id="ringGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%"   stop-color="var(--accent-primary)"/>
+                <stop offset="100%" stop-color="var(--accent-secondary)"/>
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+      </div>
+
+      <!-- Teks Sambutan -->
+      <div class="hero-text" data-aos="fade-left">
+        <p class="hero-greeting">Halo, Saya 👋</p>
+        <h1 class="hero-name">
+          <span class="name-highlight">Azhar Septian Awaludin</span>
+        </h1>
+        <h2 class="hero-role">
+          <span class="typed-text" id="typedText"></span>
+          <span class="cursor-blink">|</span>
+        </h2>
+        <p class="hero-desc">
+          Mahasiswa penuh semangat yang mencintai dunia teknologi &amp; desain web.
+          Saya membangun solusi digital yang elegan dan fungsional.
+        </p>
+        <div class="hero-cta">
+          <a href="#project" class="btn btn-primary">Lihat Proyek</a>
+          <a href="#contact" class="btn btn-outline">Hubungi Saya</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scroll indicator -->
+    <div class="scroll-indicator">
+      <div class="scroll-dot"></div>
+    </div>
+  </section>
+
+  <!-- SECTION 2 — ABOUT ME -->
+  <section class="about" id="about">
+    <div class="section-container">
+      <div class="section-header" data-aos="fade-up">
+        <h2 class="section-title">About <span class="title-accent">Me</span></h2>
+        <p class="section-subtitle">Kenali saya lebih dekat</p>
+      </div>
+
+      <div class="about-grid">
+        <!-- Kartu info -->
+        <div class="about-card" data-aos="fade-right">
+          <div class="about-card-icon"><i class='bx bx-user-circle'></i></div>
+          <h3>Siapa Saya?</h3>
+          <p>
+            Saya seorang Mahasiswa <strong>Sistem Informasi</strong> yang sedang menempuh pendidkan di
+            <strong>Universitas Siliwangi</strong>. Saya memiliki minat besar
+            dalam pengembangan web, desain UI/UX, manajemen data, dan teknologi informasi.
+          </p>
+          <!-- Tambahkan deskripsi Anda di sini -->
+          <p class="about-extra">
+            [Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque corrupti blanditiis excepturi est, facilis alias a quisquam. Blanditiis quasi est quaerat voluptatem quae doloremque nihil deleniti ipsam reprehenderit, dignissimos voluptatum..]
+          </p>
+        </div>
+
+        <!-- Info detail -->
+        <div class="about-details" data-aos="fade-left">
+          <div class="detail-item">
+            <i class='bx bx-book-open'></i>
+            <div>
+              <span class="detail-label">Universitas</span>
+              <span class="detail-value">Universitas Siliwangi</span>
+            </div>
+          </div>
+          <div class="detail-item">
+            <i class='bx bx-code-alt'></i>
+            <div>
+              <span class="detail-label">Program Studi</span>
+              <span class="detail-value">Sistem Informasi</span>
+            </div>
+          </div>
+          <div class="detail-item">
+            <i class='bx bx-map-pin'></i>
+            <div>
+              <span class="detail-label">Lokasi</span>
+              <span class="detail-value">Tasikmalaya, Indonesia</span>
+            </div>
+          </div>
+          <div class="detail-item">
+            <i class='bx bx-calendar'></i>
+            <div>
+              <span class="detail-label">Status</span>
+              <span class="detail-value">Mahasiswa Aktif ✅</span>
+            </div>
+          </div>
+          <!-- Tambahkan lebih banyak detail di sini jika perlu -->
+
+          <a href="#contact" class="btn btn-primary mt-detail">Kontak Saya</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 3 — SKILLS -->
+  <section class="skills" id="skills">
+    <div class="section-container">
+      <div class="section-header" data-aos="fade-up">
+        <h2 class="section-title">My <span class="title-accent">Skills</span></h2>
+        <p class="section-subtitle">Teknologi yang saya kuasai</p>
+      </div>
+
+      <div class="skills-grid">
+        <!-- ── Skill Card: HTML ── -->
+        <div class="skill-card" data-aos="zoom-in" data-aos-delay="0">
+          <div class="skill-icon html-icon">
+            <img src="Gambar/html5.svg" alt="HTML5">
+          </div>
+          <h3 class="skill-name">HTML5</h3>
+          <p class="skill-desc">Struktur semantik, aksesibel, dan SEO-friendly untuk halaman web modern.</p>
+          <div class="skill-level">
+            <div class="level-bar" data-level="85"></div>
+          </div>
+          <span class="skill-percent">85%</span>
+        </div>
+
+        <!-- ── Skill Card: CSS ── -->
+        <div class="skill-card" data-aos="zoom-in" data-aos-delay="100">
+          <div class="skill-icon css-icon">
+            <img src="Gambar/css.svg" alt="CSS">
+          </div>
+          <h3 class="skill-name">CSS3</h3>
+          <p class="skill-desc">Desain responsif, animasi, Flexbox & Grid untuk tampilan yang memukau.</p>
+          <div class="skill-level">
+            <div class="level-bar" data-level="80"></div>
+          </div>
+          <span class="skill-percent">80%</span>
+        </div>
+
+        <!-- ── Skill Card: C++ ── -->
+        <div class="skill-card" data-aos="zoom-in" data-aos-delay="100">
+          <div class="skill-icon css-icon">
+            <img src="Gambar/c-plusplus.svg" alt="C++">
+          </div>
+          <h3 class="skill-name">C++</h3>
+          <p class="skill-desc">Memiliki pemahaman kuat tentang logika pemrograman berbasis C++, OPP (<i>Object-Oriented Programing</i>), dan penyelesaian masalah menggunakan algoritma standar.</p>
+          <div class="skill-level">
+            <div class="level-bar" data-level="80"></div>
+          </div>
+          <span class="skill-percent">80%</span>
+        </div>
+
+        <!-- ── Skill Card: Laragon ── -->
+        <div class="skill-card" data-aos="zoom-in" data-aos-delay="200">
+          <div class="skill-icon laragon-icon">
+            <img src="Gambar/laragon.svg" alt="Laragon">
+          </div>
+          <h3 class="skill-name">Laragon</h3>
+          <p class="skill-desc">Lingkungan pengembangan lokal yang cepat untuk proyek web berbasis PHP.</p>
+          <div class="skill-level">
+            <div class="level-bar" data-level="75"></div>
+          </div>
+          <span class="skill-percent">75%</span>
+        </div>
+
+        <div class="skill-card" data-aos="zoom-in" data-aos-delay="400">
+          <div class="skill-icon excel-icon">
+            <img src="Gambar/excel.svg" alt="Microsoft Excel" />
+          </div>
+          <h3 class="skill-name">Microsoft Excel</h3>
+          <p class="skill-desc">Mahir dalam pengolahan data, tabel, formula, dan visualisasi dengan menggunakan Microsoft Excel/Google Sheets.</p>
+          <div class="skill-level">
+            <div class="level-bar" data-level="85"></div>
+          </div>
+          <span class="skill-percent">85%</span>
+        </div>
+
+        <div class="skill-card" data-aos="zoom-in" data-aos-delay="400">
+          <div class="skill-icon excel-icon">
+            <img src="Gambar/microsoft-word.svg" alt="Microsoft Word" />
+          </div>
+          <h3 class="skill-name">Microsoft Word</h3>
+          <p class="skill-desc">Menyusun dokumentasi teknis, laporan riset, dan surat resmi dengan standarisasi format profesional.</p>
+          <div class="skill-level">
+            <div class="level-bar" data-level="85"></div>
+          </div>
+          <span class="skill-percent">85%</span>
+        </div>
+     
+        <!-- ── Skill Kosong — Siap Diisi ── -->
+        <div class="skill-card" data-aos="zoom-in" data-aos-delay="600">
+          <div class="skill-icon laragon-icon">
+          <!-- GANTI IKON DI SINI — lihat tutorial di komentar atas ↑ -->
+            <i class='bx bx-plus-circle'></i>
+        </div>
+        <!--  ↓ Ganti teks di bawah ini ↓  -->
+        <h3 class="skill-name">Skill Baru</h3>
+        <p class="skill-desc">Deskripsi skill Anda di sini. Jelaskan secara singkat kemampuan Anda.</p>
+        <div class="skill-level">
+            <!-- Ganti angka 70 sesuai kemampuan Anda (0-100) -->
+            <div class="level-bar" data-level="70"></div>
+          </div>
+          <span class="skill-percent">70%</span>
+        </div>
+
+      </div> 
+    </div>
+  </section>
+
+  <!-- TUTORIAL LENGKAP: CARA MENAMBAH SKILL BARU
+
+  LANGKAH 1 — SALIN TEMPLATE KARTU SKILL
+  ────────────────────────────────────────
+  Salin seluruh blok <div class="skill-card"> ... </div> di bawah ini.
+  Tempel tepat di atas komentar penutup ini.
+
+  LANGKAH 2 — PILIH WARNA IKON
+  ─────────────────────────────
+  Ganti class CSS pada <div class="skill-icon NAMA-ICON-CLASS">
+  Kelas warna sudah tersedia:
+    • html-icon    → merah  (untuk HTML)
+    • css-icon     → biru   (untuk CSS)
+    • laragon-icon → biru aksen (untuk tools/server)
+    • word-icon    → biru tua Microsoft
+    • excel-icon   → hijau Microsoft
+    • ppt-icon     → merah/oranye Microsoft
+    • python-icon  → kuning Python
+    • figma-icon   → ungu/pink Figma
+    • js-icon      → kuning JavaScript
+    • php-icon     → ungu PHP
+  Anda bisa juga membuat kelas baru di style.css dengan pola:
+    .nama-icon { background: rgba(R,G,B,0.15); color: #HEXWARNA; }
+
+  LANGKAH 3 — GANTI IKON BOXICONS
+  ─────────────────────────────────
+  Cari tag <i class='bx bxl-NAMAIKON'></i> di dalam kartu.
+  Cara mencari nama ikon yang tepat:
+    a) Kunjungi: https://boxicons.com
+    b) Ketik nama software/bahasa di kolom search (misal: "python", "figma")
+    c) Klik ikon yang muncul → salin teks class-nya
+       Contoh hasil: bx bxl-python  /  bx bxl-figma
+    d) Tempel ke dalam tag <i> Anda:
+       <i class='bx bxl-python'></i>
+       <i class='bx bxl-figma'></i>
+       <i class='bx bxl-javascript'></i>
+
+  CATATAN PENTING tentang PREFIKS IKON BOXICONS:
+  ───────────────────────────────────────────────
+  Boxicons memiliki 3 prefiks berbeda:
+    • bxl-  → Logo brand/software (GUNAKAN INI untuk skill)
+              Contoh: bxl-html5, bxl-css3, bxl-python, bxl-figma
+    • bx-   → Ikon umum/UI
+              Contoh: bx-server, bx-code-alt, bx-star
+    • bxs-  → Ikon solid/tebal
+              Contoh: bxs-star, bxs-heart
+  Untuk ikon software yang TIDAK ada di Boxicons (misal MS Office),
+  gunakan ikon generik: bx-file-blank (Word), bx-table (Excel),
+  bx-slideshow (PowerPoint), atau bx-server (tools).
+
+  LANGKAH 4 — ISI TEKS KARTU
+  ────────────────────────────
+  • skill-name  → Nama skill (misal: "Python", "Microsoft Word")
+  • skill-desc  → Deskripsi singkat 1-2 kalimat
+  • data-level  → Angka 0–100 untuk panjang progress bar
+  • skill-percent → Sama dengan data-level + tanda "%"
+  ══════════════════════════════════════════════════════════════════ -->
+
+
+  <!-- SECTION 4 — PROJECT -->
+  <section class="project" id="project">
+    <div class="section-container">
+      <div class="section-header" data-aos="fade-up">
+        <h2 class="section-title">My <span class="title-accent">Projects</span></h2>
+        <p class="section-subtitle">Karya yang pernah saya buat</p>
+      </div>
+
+      <div class="project-grid">
+
+      <!-- Project Pertama -->
+        <div class="project-card filled-card" data-aos="fade-up">
+          <div class="project-img">
+            <img src="Gambar/Library Inventory System.png" alt="Library Inventory System" />
+          <div class="project-overlay">
+            <a href="https://docs.google.com/spreadsheets/d/1HYZfhtHELqYDDGcgkUCVF8Nynfzha77NCEdX277Uhgg/edit?usp=sharing" 
+               target="_blank" 
+               class="project-btn">
+               <i class='bx bx-link-external'></i> Lihat Detail
+            </a>
+          </div>
+          </div>
+          <div class="project-info">
+            <h3>Sistem Inventaris Perpustakaan</h3>
+            <p>Sistem manajemen data peminjaman dan inventaris buku untuk perpustakaan SMAN 3 Tasikmalaya yang dibangun menggunakan formula dan logika spreadsheet.</p>
+          <div class="project-tags">
+            <span>Google Sheets</span><span>Data Management</span><span>System</span>
+          </div>
+          </div>
+        </div>
+
+        <!-- ── Project Card Kosong 2 ── -->
+        <div class="project-card empty-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="project-placeholder">
+            <i class='bx bx-plus-circle'></i>
+            <p>Proyek Akan Datang</p>
+            <span>Segera hadir…</span>
+          </div>
+        </div>
+
+        <!-- ── Project Card Kosong 3 ── -->
+        <div class="project-card empty-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="project-placeholder">
+            <i class='bx bx-plus-circle'></i>
+            <p>Proyek Akan Datang</p>
+            <span>Segera hadir…</span>
+          </div>
+        </div>
+
+        <!--
+        <div class="project-card filled-card" data-aos="fade-up">
+          <div class="project-img">
+            <img src="path/ke/screenshot.png" alt="Nama Proyek" />
+            <div class="project-overlay">
+              <a href="#" class="project-btn"><i class='bx bx-link-external'></i> Live Demo</a>
+              <a href="#" class="project-btn"><i class='bx bxl-github'></i> GitHub</a>
+            </div>
+          </div>
+          <div class="project-info">
+            <h3>Nama Proyek</h3>
+            <p>Deskripsi singkat proyek Anda di sini.</p>
+            <div class="project-tags">
+              <span>HTML</span><span>CSS</span><span>PHP</span>
+            </div>
+          </div>
+        </div>
+        -->
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 5 — CERTIFICATION -->
+  <section class="certification" id="certification">
+    <div class="section-container">
+      <div class="section-header" data-aos="fade-up">
+        <h2 class="section-title">My <span class="title-accent">Certifications</span></h2>
+        <p class="section-subtitle">Sertifikat & pencapaian yang telah saya raih</p>
+      </div>
+
+      <div class="cert-grid">
+
+      <!--
+        CARA MENAMBAH SERTIFIKAT BARU:
+        ─────────────────────────────
+        1. Salin seluruh blok <div class="cert-card filled-cert"> ... </div>
+        2. Ganti src="" dengan path gambar sertifikat Anda
+           Contoh: src="img/sertifikat-html.jpg"
+        3. Ganti "Nama Sertifikat" dengan judul sertifikasi
+        4. Ganti "Nama Lembaga" dengan nama penerbit (misal: Dicoding, Coursera)
+        5. Ganti "Bulan Tahun" dengan tanggal perolehan
+        6. Ganti href="#" pada tombol dengan link sertifikat online (jika ada)
+      -->
+
+      <!-- ── Cert Card Kosong 1 ── -->
+      <div class="cert-card empty-cert" data-aos="fade-up" data-aos-delay="0">
+        <div class="cert-placeholder">
+          <i class='bx bx-certification'></i>
+          <p>Sertifikat Akan Datang</p>
+          <span>Segera hadir…</span>
+        </div>
+      </div>
+
+      <!-- ── Cert Card Kosong 2 ── -->
+      <div class="cert-card empty-cert" data-aos="fade-up" data-aos-delay="100">
+        <div class="cert-placeholder">
+          <i class='bx bx-certification'></i>
+          <p>Sertifikat Akan Datang</p>
+          <span>Segera hadir…</span>
+        </div>
+      </div>
+
+      <!-- ── Cert Card Kosong 3 ── -->
+      <div class="cert-card empty-cert" data-aos="fade-up" data-aos-delay="200">
+        <div class="cert-placeholder">
+          <i class='bx bx-certification'></i>
+          <p>Sertifikat Akan Datang</p>
+          <span>Segera hadir…</span>
+        </div>
+      </div>
+
+      <!-- CONTOH SERTIFIKAT YANG SUDAH DIISI:
+
+        <div class="cert-card filled-cert" data-aos="fade-up">
+          <div class="cert-img">
+            <img src="img/nama-file-sertifikat.jpg" alt="Nama Sertifikat" />
+            <div class="cert-overlay">
+              <a href="#" target="_blank" class="project-btn">
+                <i class='bx bx-link-external'></i> Lihat Sertifikat
+              </a>
+            </div>
+          </div>
+          <div class="cert-info">
+            <h3>Nama Sertifikat</h3>
+            <p class="cert-issuer"><i class='bx bx-buildings'></i> Nama Lembaga</p>
+            <p class="cert-date"><i class='bx bx-calendar'></i> Bulan Tahun</p>
+          </div>
+        </div>
+      -->
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 6 — CONTACT -->
+  <section class="contact" id="contact">
+    <div class="section-container">
+      <div class="section-header" data-aos="fade-up">
+        <h2 class="section-title">Get In <span class="title-accent">Touch</span></h2>
+        <p class="section-subtitle">Mari terhubung dan berkolaborasi!</p>
+      </div>
+
+      <div class="contact-wrapper" data-aos="fade-up" data-aos-delay="100">
+        <p class="contact-intro">
+          Punya pertanyaan, proyek, atau ingin berkolaborasi? Saya selalu terbuka
+          untuk berdiskusi. Hubungi saya melalui platform di bawah ini 👇
+        </p>
+
+        <div class="social-grid">
+          <!-- WhatsApp -->
+          <a
+            href="https://wa.me/6281338415285"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="social-card whatsapp"
+            data-aos="zoom-in" data-aos-delay="0">
+
+            <div class="social-icon"><i class='bx bxl-whatsapp'></i></div>
+            <div class="social-info">
+              <span class="social-platform">WhatsApp</span>
+              <span class="social-handle">+62 813-3841-5285</span>
+            </div>
+            <i class='bx bx-right-arrow-alt social-arrow'></i>
+          </a>
+
+          <!-- Instagram -->
+          <a
+            href="https://instagram.com/azhrsptn"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="social-card instagram"
+            data-aos="zoom-in" data-aos-delay="100"
+          >
+            <div class="social-icon"><i class='bx bxl-instagram'></i></div>
+            <div class="social-info">
+              <span class="social-platform">Instagram</span>
+              <!-- Ganti dengan username Instagram Anda -->
+              <span class="social-handle">@azhrsptn</span>
+            </div>
+            <i class='bx bx-right-arrow-alt social-arrow'></i>
+          </a>
+          
+          <!-- Email -->
+          <a href="mailto:azharseptian19@gmail.com"
+            class="social-card email"
+            data-aos="zoom-in" data-aos-delay="400"
+          >
+          <div class="social-icon"><i class='bx bx-envelope'></i></div>
+          <div class="social-info">
+            <span class="social-platform">Email</span>
+            <span class="social-handle">azharseptian19@gmail.com</span>
+            </div>
+            <i class='bx bx-right-arrow-alt social-arrow'></i>
+          </a>
+
+          <a 
+            href="">
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-container">
+      <p>
+        Dibuat dengan <i class='bx bx-heart' style="color:var(--accent-primary)"></i>
+        oleh <strong>Azhar</strong> | Mahasiswa Sistem Informasi Unsil
+      </p>
+      <p class="footer-copy">&copy; <span id="footerYear"></span> All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- JAVASCRIPT UTAMA -->
+  <script src="script.js"></script>
+</body>
+</html>
