@@ -120,8 +120,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // Ganti atau tambah teks di sini sesuai peran / keahlian Anda
   const typedWords = [
     'Web Developer 💻',
-    'UI/UX Enthusiast 🎨',
-    'Data Analyst 🎓 ',
+    'Data Management 🎓 ',
     'Problem Solver 🔧',
   ];
 
